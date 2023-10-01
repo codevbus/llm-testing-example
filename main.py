@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-
+import os
 from dotenv import load_dotenv
 from langchain.chat_models import ChatOpenAI
 from langchain.prompts.chat import ChatPromptTemplate
@@ -8,6 +8,8 @@ from langchain.schema import BaseOutputParser
 
 # Load anything set in .env (OpenAI API key)
 load_dotenv()
+
+os.getenv("OPENAI_API_KEY")
 
 class CommaSeparatedListOutputParser(BaseOutputParser):
     """Parse the output of an LLM call to a comma-separated list."""

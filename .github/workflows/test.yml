@@ -4,6 +4,8 @@ on: [push]
 
 jobs:
   build:
+  env:
+    OPENAI_API_KEY : ${{ secrets.OPENAI_API_KEY }}
 
     runs-on: ubuntu-latest
 
