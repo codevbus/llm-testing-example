@@ -1,9 +1,10 @@
 #!/usr/bin/env python
 
 
-from spellchecker import SpellChecker
+import os
 import pytest
 import string
+from spellchecker import SpellChecker
 from main import CommaSeparatedListOutputParser, template
 
 os.getenv("OPENAI_API_KEY")
